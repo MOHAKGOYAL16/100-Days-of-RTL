@@ -1,0 +1,30 @@
+Day-1. Half Adder
+Day-2. Full Adder
+Day-3. Half Subtractor
+Day-4. Full subtractor
+Day-5. Gate implementation
+Day-6. Binary to Gray code converter
+Day-7. Gray to Binary code converter
+Day-8. BCD to XS3 code
+Day-9. 2x1 and 4x1 MUX
+Day-10. 4x2 Encoder
+Day-11. 8x3 Encoder
+Day-12. 2x4 and 3x8 Decoder
+Day-13. Full Adder using Two Half Adder
+Day-14. Full Subtractor using Two Half Subtractor
+Day-15. Ripple Carry Adder
+Day-16. Adder/Subtractor
+Day-17. Carry look ahead Adder
+Day-18. 4-bit Magnitude Comparator 
+Day-19. SR FF
+Day-20. JK FF
+Day-21. D FF
+Day-22. SISO Shift Register
+Day-23. SIPO Shift Register
+Day-24. PISO Shift Register
+Day-25. PIPO Shift Register
+Day-26. Universal Shift Register
+Day-27. Ring Counter
+Day-28. Johnson Counter
+Day-29. Synchronous Up and down Counter
+Day-30. Asynchronous Up and down Counter
