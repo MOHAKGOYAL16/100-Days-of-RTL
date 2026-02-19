@@ -1,0 +1,6 @@
+module full_subtractor(a,b,cin,dif,bout);
+input a,b,cin;
+output dif,bout;
+assign dif = a^b^cin;
+assign bout = (~a&b) | (~a&cin) | (b&cin);
+endmodule
