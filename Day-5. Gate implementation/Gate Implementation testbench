@@ -1,0 +1,12 @@
+module Gate_implementation_tb();
+reg t_a, t_b;
+wire AND_1, OR_2, NOT_3, NOT_4, NAND_5, NOR_6, XOR_7, XNOR_8;
+Gate_implementation dut(.a(t_a), .b(t_b), .and_1(AND_1), .or_2(OR_2), .Not_3(NOT_3),.Not_4(NOT_4), .Nand_5(NAND_5), .Nor_6(NOR_6), .Xor_7(XOR_7), .Xnor_8(XNOR_8));
+initial begin
+t_a = 0; t_b = 0;#20
+t_a = 0; t_b = 1;#20
+t_a = 1; t_b = 0;#20
+t_a = 1; t_b = 1;#20
+$stop;
+end
+endmodule
