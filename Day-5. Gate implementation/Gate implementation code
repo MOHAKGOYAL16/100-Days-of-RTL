@@ -1,0 +1,12 @@
+module Gate_implementation(a,b,and_1, or_2, Not_3, Not_4, Nand_5, Nor_6, Xor_7, Xnor_8);
+input a,b;
+output and_1, or_2, Not_3,Not_4, Nand_5, Nor_6, Xor_7, Xnor_8;
+assign and_1 = a&b;
+assign or_2 = (a | b);
+assign Not_3 = ~a;
+assign Not_4 = ~b;
+assign Nand_5 = ~(a&b);
+assign Nor_6 = ~(a | b);
+assign Xor_7= (~a&b | ~b&a);
+assign Xnor_8 = ((~a)&(~b) | a&b);
+endmodule
