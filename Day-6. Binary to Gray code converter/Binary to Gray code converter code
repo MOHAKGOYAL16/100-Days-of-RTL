@@ -1,0 +1,7 @@
+module Binary_to_gray(b_0,b_1,b_2,g_0,g_1,g_2);
+input b_0,b_1,b_2;
+output g_0,g_1,g_2;
+assign g_2 = b_2;
+assign g_1= (b_2)^(b_1);
+assign g_0 = (b_1)^(b_0);
+endmodule
