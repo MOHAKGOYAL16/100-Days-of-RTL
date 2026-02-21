@@ -1,0 +1,17 @@
+module Binary_to_gray_tb();
+reg t_b_2, t_b_1, t_b_0;
+wire G_2,G_1,G_0;
+
+Binary_to_gray dut(.b_2(t_b_2), .b_1(t_b_1), .b_0(t_b_0), .g_2(G_2), .g_1(G_1), .g_0(G_0));
+initial begin
+t_b_2 = 0; t_b_1 = 0; t_b_0 = 0;#20
+t_b_2 = 0; t_b_1 = 0; t_b_0 = 1;#20
+t_b_2 = 0; t_b_1 = 1; t_b_0 = 0;#20
+t_b_2 = 0; t_b_1 = 1; t_b_0 = 1;#20
+t_b_2 = 1; t_b_1 = 0; t_b_0 = 0;#20
+t_b_2 = 1; t_b_1 = 0; t_b_0 = 1;#20
+t_b_2 = 1; t_b_1 = 1; t_b_0 = 0;#20
+t_b_2 = 1; t_b_1 = 1; t_b_0 = 1;#20
+$stop;
+end
+endmodule
