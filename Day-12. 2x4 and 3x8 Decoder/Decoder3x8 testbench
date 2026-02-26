@@ -1,0 +1,19 @@
+module Decoder3x8_tb();
+reg [2:0]I;
+reg en;
+wire [7:0]D;
+
+Decoder3x8 dut(.I(I), .D(D), .en(en));
+initial begin
+en = 1;
+I = 3'b000; #20
+I = 3'b001; #20
+I = 3'b010; #20
+I = 3'b011; #20
+I = 3'b100; #20
+I = 3'b101; #20
+I = 3'b110; #20
+I = 3'b111; #20
+$finish;
+end
+endmodule
