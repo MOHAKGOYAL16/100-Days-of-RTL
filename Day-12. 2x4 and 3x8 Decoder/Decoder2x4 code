@@ -1,0 +1,16 @@
+module Decoder2x4(en,I, D);
+input [1:0]I;
+input en;
+output [3:0]D;
+
+wire I1_bar,I0_bar;
+
+not not01(I1_bar,I[1]);
+not not02(I0_bar,I[0]);
+
+and and01(D[0], en, I1_bar, I0_bar);
+and and02(D[1], en, I1_bar, I[0]);
+and and03(D[2], en, I[1], I0_bar);
+and and04(D[3], en, I[1], I[0]);
+
+endmodule
