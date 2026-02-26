@@ -1,0 +1,20 @@
+module Decoder3x8(I,D,en);
+input [2:0]I;
+input en;
+output [7:0]D;
+
+wire I2_bar, I1_bar, I0_bar;
+
+not not1(I2_bar, I[2]);
+not not2(I1_bar, I[1]);
+not not3(I0_bar, I[0]);
+
+and a1(D[0], en, I2_bar, I1_bar, I0_bar);
+and a2(D[1], en, I2_bar, I1_bar, I[0]);
+and a3(D[2], en, I2_bar, I[1], I0_bar);
+and a4(D[3], en, I2_bar, I[1], I[0]);
+and a5(D[4], en, I[2], I1_bar, I0_bar);
+and a6(D[5], en, I[2], I1_bar, I[0]);
+and a7(D[6], en, I[2], I[1], I0_bar);
+and a8(D[7], en, I[2], I[1], I[0]);
+endmodule
