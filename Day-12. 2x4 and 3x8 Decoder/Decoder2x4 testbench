@@ -1,0 +1,15 @@
+module Decoder2x4_tb();
+reg [1:0]I;
+reg en;
+wire [3:0]D;
+
+Decoder2x4 dut(.I(I), .en(en), .D(D));
+initial begin
+en = 1;
+I = 2'b00; #20
+I = 2'b01; #20
+I = 2'b10; #20
+I = 2'b11; #20
+$finish;
+end
+endmodule
