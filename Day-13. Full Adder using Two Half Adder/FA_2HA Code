@@ -1,0 +1,11 @@
+module FA_2HA(A,B,Cin,sum, carry);
+input A,B,Cin;
+output sum, carry;
+wire w1, w2, w3;
+
+Half_Add m1(.sum(w1), .carry(w2), .A(A), .B(B));
+Half_Add m2(.sum(sum), .carry(w3), .A(w1), .B(Cin));
+
+or a1(carry, w3, w2);
+
+endmodule
