@@ -1,0 +1,6 @@
+module Half_sub(A,B,Borr,Diff);
+input A,B;
+output Diff, Borr;
+assign Diff= A^B;
+assign Borr = ~A&B;
+endmodule
