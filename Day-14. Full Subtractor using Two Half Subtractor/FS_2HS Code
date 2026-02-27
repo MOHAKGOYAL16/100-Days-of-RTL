@@ -1,0 +1,10 @@
+module FS_2HS(A,B,Bin, Borr, Diff);
+input A,B,Bin;
+output Borr, Diff;
+wire w1,w2,w3;
+
+Half_sub m1(.Diff(w1), .Borr(w2), .A(A), .B(B));
+Half_sub m2(.Diff(Diff), .Borr(w3), .A(w1), .B(Bin));
+or a1(Borr, w3, w2);
+
+endmodule
