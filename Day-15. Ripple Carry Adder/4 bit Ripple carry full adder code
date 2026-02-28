@@ -1,0 +1,13 @@
+module RCA(a,b,cin,sum,c_out);
+input [3:0]a,b;
+input cin;
+output [3:0]sum;
+output c_out;
+wire c1,c2,c3;
+
+full_Add FA0(.sum(sum[0]), .carry(c1), .a(a[0]), .b(b[0]), .cin(cin));
+full_Add FA1(.sum(sum[1]), .carry(c2), .a(a[1]), .b(b[1]), .cin(c1));
+full_Add FA2(.sum(sum[2]), .carry(c3), .a(a[2]), .b(b[2]), .cin(c2));
+full_Add FA3(.sum(sum[3]), .carry(c_out), .a(a[3]), .b(b[3]), .cin(c3));
+
+endmodule
