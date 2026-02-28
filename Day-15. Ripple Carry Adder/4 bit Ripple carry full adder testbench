@@ -1,0 +1,21 @@
+module RCA_tb();
+reg [3:0]a,b;
+reg cin;
+wire [3:0]sum;
+wire c_out;
+
+RCA dut(.a(a), .b(b), .cin(cin), .sum(sum), .c_out(c_out));
+
+initial begin
+a = 0; b = 0; cin = 0;#20
+a = 0; b = 0; cin = 1;#20
+a = 0; b = 1; cin = 0;#20
+a = 0; b = 1; cin = 1;#20
+a = 1; b = 0; cin = 0;#20
+a = 1; b = 0; cin = 1;#20
+a = 1; b = 1; cin = 0;#20
+a = 1; b = 1; cin = 1;#20
+$finish;
+end
+
+endmodule
