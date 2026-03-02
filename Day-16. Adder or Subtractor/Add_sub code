@@ -1,0 +1,20 @@
+module add_sub(A, B, C, Z, c_out);
+input [3:0]A,B;
+input C;
+output [3:0]Z;
+output c_out;
+
+wire [3:0]B_not;
+wire w1,w2,w3;
+
+assign B_not[0] = B[0] ^ C;
+assign B_not[1] = B[1] ^ C;
+assign B_not[2] = B[2] ^ C;
+assign B_not[3] = B[3] ^ C;
+
+full_add m1(.A(A[0]), .B(B_not[0]), .C(C), .sum(Z[0]), .carry(w1));
+full_add m2(.A(A[1]), .B(B_not[1]), .C(w1), .sum(Z[1]), .carry(w2));
+full_add m3(.A(A[2]), .B(B_not[2]), .C(w2), .sum(Z[2]), .carry(w3));
+full_add m4(.A(A[3]), .B(B_not[3]), .C(w3), .sum(Z[3]), .carry(c_out));
+
+endmodule
