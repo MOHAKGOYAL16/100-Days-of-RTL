@@ -19,12 +19,13 @@ Day-18. 4-bit Magnitude Comparator
 Day-19. SR FF
 Day-20. JK FF
 Day-21. D FF
-Day-22. SISO Shift Register
-Day-23. SIPO Shift Register
-Day-24. PISO Shift Register
-Day-25. PIPO Shift Register
-Day-26. Universal Shift Register
-Day-27. Ring Counter
-Day-28. Johnson Counter
-Day-29. Synchronous Up and down Counter
-Day-30. Asynchronous Up and down Counter
+Day-22. T FF
+Day-23. SISO Shift Register
+Day-24. SIPO Shift Register
+Day-25. PISO Shift Register
+Day-26. PIPO Shift Register
+Day-27. Universal Shift Register
+Day-28. Ring Counter
+Day-29. Johnson Counter
+Day-30. Synchronous Up and down Counter
+Day-31. Asynchronous Up and down Counter
