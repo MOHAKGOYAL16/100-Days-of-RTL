@@ -1,0 +1,14 @@
+module SR_ff_tb();
+reg S,R,clk;
+wire Q, Q_bar;
+
+SR_ff dut(.S(S), .R(R), .clk(clk), .Q(Q), .Q_bar(Q_bar));
+
+initial begin
+S=0; R=1; clk=1;#20;
+S=0; R=0; clk=1;#20;
+S=1; R=0; clk=1;#20;
+S=1; R=1; clk=1;#20;
+$finish;
+end
+endmodule
