@@ -1,0 +1,17 @@
+module PISO_tb();
+reg [3:0]si;
+reg clk,mode;
+wire so;
+
+PISO dut(.si(si), .clk(clk), .mode(mode), .so(so));
+
+initial begin
+clk = 0;
+si = 4'b1010;
+mode = 1;
+
+#10
+mode = 0;
+end
+always #5 clk = ~clk;
+endmodule
