@@ -1,0 +1,20 @@
+module Mag_comp(a,b,L_op, G_op, E_op);
+input [3:0]a,b;
+output reg L_op, G_op, E_op;
+
+always@(a,b)
+begin
+if(a>b)
+    G_op = 1'b1;
+else
+    G_op = 1'b0;
+if(a<b)
+    L_op = 1'b1;
+else
+    L_op = 1'b0;
+if(a==b)
+    E_op = 1'b1;
+else
+    E_op = 1'b0;
+end
+endmodule
