@@ -1,0 +1,13 @@
+module SISO(shift_in, shift_out,clk);
+input shift_in,clk;
+output reg shift_out;
+reg w1,w2,w3;
+
+always @(posedge clk)
+begin
+w1 <= shift_in;
+w2 <= w1;
+w3 <= w2;
+shift_out <= w3;
+end
+endmodule
