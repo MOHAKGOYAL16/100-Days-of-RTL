@@ -1,0 +1,11 @@
+module SR_ff(S,R,clk,Q,Q_bar);
+input S,R,clk;
+output Q, Q_bar;
+wire w1,w2;
+
+nand a1(w1, S,clk);
+nand a2(w2,R,clk);
+nand a3(Q,Q_bar,w1);
+nand a4(Q_bar,Q,w2);
+
+endmodule
