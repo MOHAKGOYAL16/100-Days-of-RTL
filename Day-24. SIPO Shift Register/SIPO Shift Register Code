@@ -1,0 +1,12 @@
+module SIPO(clk, shift_in, q);
+input shift_in, clk;
+output reg [3:0]q;
+
+always @(posedge clk)
+begin
+q[0] <= shift_in;
+q[1] <= q[0];
+q[2] <= q[1];
+q[3] <= q[2];
+end
+endmodule
