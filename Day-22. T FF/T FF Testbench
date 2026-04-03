@@ -1,0 +1,20 @@
+module T_FF_tb();
+reg T,clk;
+wire q,q_bar;
+
+T_FF dut(.T(T), .clk(clk), .q(q), .q_bar(q_bar));
+
+initial begin
+clk = 0;
+forever #2 clk = ~clk;
+end
+
+initial begin
+T = 0;#2
+T = 0;#2
+T = 1;#5
+T = 1;#5
+T = 0;#5
+$finish;
+end
+endmodule
